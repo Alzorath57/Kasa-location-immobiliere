@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <h1>
-        <img src="/LOGO.webp" alt="Logo du site location immobiliere Kasa" />
+        <img src="/logo.svg" alt="Logo du site location immobiliere Kasa" />
       </h1>
       <nav>
         <ul>
