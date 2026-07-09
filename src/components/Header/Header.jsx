@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.scss";
 
 function Header() {
@@ -10,10 +10,10 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/about">A Propos</Link>
+            <NavLink to="/">Accueil</NavLink>
           </li>
           <li>
-            <Link to="/">Accueil</Link>
+            <NavLink to="/about">A Propos</NavLink>
           </li>
         </ul>
       </nav>

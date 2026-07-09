@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  height: 68px;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 100px 0 100px;
+  li {
+    list-style: none;
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+  }
+  ul {
+    display: flex;
+    gap: 57px;
+  }
+  img {
+    height: 68px;
+    width: auto;
+    max-width: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
