@@ -6,16 +6,18 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 29px;
   padding-top: 66px;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
   p {
     color: white;
     letter-spacing: 0;
     line-height: 143%;
     font-size: 24px;
     font-weight: 500;
+    padding-bottom: 29px;
   }
   img {
     width: 122px;
