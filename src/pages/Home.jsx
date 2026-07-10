@@ -1,5 +1,5 @@
 import logements from "../data/logements.json";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 
 function Home() {
   return (
