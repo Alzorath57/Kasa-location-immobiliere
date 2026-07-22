@@ -7,7 +7,6 @@ import bannerHome from "../assets/banner-home.jpg";
 function Home() {
   return (
     <>
-      <h1>Home</h1>
       <Banner
         cover={bannerHome}
         description="Paysage de mer et de falaises nuageux"
