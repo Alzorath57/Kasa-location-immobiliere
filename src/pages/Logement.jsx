@@ -8,7 +8,25 @@ function Logement() {
   if (!logement) {
     return <Error />;
   }
-  return <h1>{logement.title}</h1>;
+  const star = [1, 2, 3, 4, 5];
+  return (
+    <>
+      <h1>{logement.title}</h1>
+      <p>{logement.location}</p>
+      <ul>
+        {logement.tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+      <div className="host">
+        <p>{logement.host.name}</p>
+        <img src={logement.host.picture} alt={logement.host.name} />
+      </div>
+      {star.map((s) =>
+        s <= logement.rating ? <span key={s}>★</span> : <span key={s}>☆</span>,
+      )}
+    </>
+  );
 }
 
 export default Logement;
