@@ -6,6 +6,8 @@ import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg";
 import Accordion from "../components/Accordion/Accordion";
 import "./Logement.scss";
+import starActive from "../assets/star-active.svg";
+import starInactive from "../assets/star-inactive.svg";
 
 function Logement() {
   const { id } = useParams();
@@ -44,20 +46,40 @@ function Logement() {
           <img src={arrowRight} alt="Photo suivante" />
         </button>
       </div>
-      <h1>{logement.title}</h1>
-      <p>{logement.location}</p>
-      <ul>
-        {logement.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
-      <div className="host">
-        <p>{logement.host.name}</p>
-        <img src={logement.host.picture} alt={logement.host.name} />
+      <div className="logement-info">
+        <div className="logement-titre">
+          <h1>{logement.title}</h1>
+          <p>{logement.location}</p>
+          <ul>
+            {logement.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="host-rating">
+          <div className="host">
+            <p>{logement.host.name}</p>
+            <img src={logement.host.picture} alt={logement.host.name} />
+          </div>
+          <div className="rating">
+            {star.map((s) =>
+              s <= logement.rating ? (
+                <div className="star-active" key={s}>
+                  <span>
+                    <img src={starActive} alt="Etoile active" />
+                  </span>
+                </div>
+              ) : (
+                <div className="star-inactive" key={s}>
+                  <span>
+                    <img src={starInactive} alt="Etoile inactive" />
+                  </span>
+                </div>
+              ),
+            )}
+          </div>
+        </div>
       </div>
-      {star.map((s) =>
-        s <= logement.rating ? <span key={s}>★</span> : <span key={s}>☆</span>,
-      )}
       <Accordion
         title="Description"
         content={<p>{logement.description}</p>}
