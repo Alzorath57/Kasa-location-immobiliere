@@ -37,3 +37,13 @@
     z-index: 2;
   }
 }
+@media (max-width: 480px) {
+  .card {
+    width: 335px;
+    height: 255px;
+  }
+  .card p {
+    top: auto;
+    bottom: 15px;
+  }
+}
