@@ -80,20 +80,22 @@ function Logement() {
           </div>
         </div>
       </div>
-      <Accordion
-        title="Description"
-        content={<p>{logement.description}</p>}
-      ></Accordion>
-      <Accordion
-        title="Equipements"
-        content={
-          <ul>
-            {logement.equipments.map((equipement) => (
-              <li key={equipement}>{equipement}</li>
-            ))}
-          </ul>
-        }
-      ></Accordion>
+      <div className="accordions">
+        <Accordion
+          title="Description"
+          content={<p>{logement.description}</p>}
+        ></Accordion>
+        <Accordion
+          title="Equipements"
+          content={
+            <ul>
+              {logement.equipments.map((equipement) => (
+                <li key={equipement}>{equipement}</li>
+              ))}
+            </ul>
+          }
+        ></Accordion>
+      </div>
     </>
   );
 }
