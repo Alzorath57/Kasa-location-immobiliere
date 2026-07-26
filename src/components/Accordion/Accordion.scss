@@ -1,0 +1,32 @@
+.accordion {
+  flex: 1;
+  background-color: #ff6060;
+  border-radius: 10px 10px 5px 5px;
+  color: #fff;
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  .accordion-content {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    background-color: #f6f6f6;
+  }
+  .accordion-content ul {
+    list-style: none;
+  }
+  .accordion-content li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .accordion-content p {
+    line-height: 160%;
+    font-size: 18px;
+  }
+}
