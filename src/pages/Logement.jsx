@@ -4,6 +4,7 @@ import Error from "./Error";
 import { useState } from "react";
 import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg";
+import Accordion from "../components/Accordion/Accordion";
 
 function Logement() {
   const { id } = useParams();
@@ -49,6 +50,20 @@ function Logement() {
       {star.map((s) =>
         s <= logement.rating ? <span key={s}>★</span> : <span key={s}>☆</span>,
       )}
+      <Accordion
+        title="Description"
+        content={<p>{logement.description}</p>}
+      ></Accordion>
+      <Accordion
+        title="Equipements"
+        content={
+          <ul>
+            {logement.equipments.map((equipement) => (
+              <li key={equipement}>{equipement}</li>
+            ))}
+          </ul>
+        }
+      ></Accordion>
     </>
   );
 }
