@@ -92,10 +92,7 @@
     display: flex;
     align-items: center;
   }
-  .star-active img {
-    height: 34px;
-    width: 34px;
-  }
+  .star-active img,
   .star-inactive img {
     height: 24px;
     width: 24px;
@@ -139,6 +136,9 @@
       justify-content: space-between;
       width: 100%;
     }
+    .host-rating span {
+      margin: 0 2px;
+    }
     h1 {
       font-size: 18px;
       margin-bottom: 5px;
@@ -155,13 +155,10 @@
       font-weight: 700;
       margin-bottom: 0;
     }
-    .star-active img {
-      width: 25px;
-      height: 25px;
-    }
+    .star-active img,
     .star-inactive img {
-      width: 18px;
-      height: 18px;
+      width: 13px;
+      height: 13px;
     }
   }
   .accordions {
