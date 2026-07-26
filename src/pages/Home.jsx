@@ -19,6 +19,7 @@ function Home() {
             title={logement.title}
             cover={logement.cover}
             description={logement.description}
+            id={logement.id}
           />
         ))}
       </section>
