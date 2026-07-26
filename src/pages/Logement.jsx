@@ -5,6 +5,7 @@ import { useState } from "react";
 import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg";
 import Accordion from "../components/Accordion/Accordion";
+import "./Logement.scss";
 
 function Logement() {
   const { id } = useParams();
@@ -16,26 +17,33 @@ function Logement() {
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   return (
     <>
-      <img src={logement.pictures[currentPictureIndex]} alt={logement.title} />
-      <button
-        onClick={() =>
-          setCurrentPictureIndex(
-            (currentPictureIndex - 1 + logement.pictures.length) %
-              logement.pictures.length,
-          )
-        }
-      >
-        <img src={arrowLeft} alt="Photo précédente" />
-      </button>
-      <button
-        onClick={() =>
-          setCurrentPictureIndex(
-            (currentPictureIndex + 1) % logement.pictures.length,
-          )
-        }
-      >
-        <img src={arrowRight} alt="Photo suivante" />
-      </button>
+      <div className="carousel">
+        <img
+          src={logement.pictures[currentPictureIndex]}
+          alt={logement.title}
+        />
+        <button
+          className="arrow-left"
+          onClick={() =>
+            setCurrentPictureIndex(
+              (currentPictureIndex - 1 + logement.pictures.length) %
+                logement.pictures.length,
+            )
+          }
+        >
+          <img src={arrowLeft} alt="Photo précédente" />
+        </button>
+        <button
+          className="arrow-right"
+          onClick={() =>
+            setCurrentPictureIndex(
+              (currentPictureIndex + 1) % logement.pictures.length,
+            )
+          }
+        >
+          <img src={arrowRight} alt="Photo suivante" />
+        </button>
+      </div>
       <h1>{logement.title}</h1>
       <p>{logement.location}</p>
       <ul>
