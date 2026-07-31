@@ -45,6 +45,9 @@ function Logement() {
         >
           <img src={arrowRight} alt="Photo suivante" />
         </button>
+        <p className="compteur">
+          {currentPictureIndex + 1}/{logement.pictures.length}
+        </p>
       </div>
       <div className="logement-info">
         <div className="logement-titre">

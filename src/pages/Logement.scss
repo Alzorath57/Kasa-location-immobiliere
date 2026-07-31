@@ -34,6 +34,16 @@
     height: 100%;
     object-fit: cover;
   }
+  .compteur {
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 500;
+    bottom: 25px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
 }
 .logement-info {
   display: flex;
@@ -112,6 +122,9 @@
     .arrow-right {
       width: 12px;
       height: 20px;
+    }
+    .compteur {
+      display: none;
     }
   }
   .logement-info {
