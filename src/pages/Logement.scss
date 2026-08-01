@@ -48,12 +48,13 @@
 .logement-info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 100px;
   h1 {
     font-size: 36px;
     font-weight: 500;
     color: #ff6060;
+    line-height: 143%;
   }
   .logement-titre p {
     font-size: 18px;
@@ -69,8 +70,11 @@
     margin-right: 10px;
     font-size: 14px;
     margin-bottom: 24px;
-    padding: 5px 15px;
+    padding: 0px 15px;
     font-weight: 700;
+    min-width: 115px;
+    text-align: center;
+    line-height: 25px;
   }
   .host {
     display: flex;
@@ -95,12 +99,10 @@
     align-items: flex-end;
     gap: 10px;
   }
-  .host-rating span {
-    margin: 0 5px;
-  }
   .rating {
     display: flex;
     align-items: center;
+    gap: 16px;
   }
   .star-active img,
   .star-inactive img {
@@ -135,6 +137,9 @@
     li {
       border-radius: 5px;
       width: fit-content;
+      min-width: 84px;
+      line-height: 18px;
+
     }
     .host p {
       font-size: 12px;
@@ -143,15 +148,16 @@
       width: 32px;
       height: 32px;
     }
+    .rating {
+      gap: 7px;
+    }
     .host-rating {
       align-items: flex-start;
       flex-direction: row-reverse;
       justify-content: space-between;
       width: 100%;
     }
-    .host-rating span {
-      margin: 0 2px;
-    }
+    
     h1 {
       font-size: 18px;
       margin-bottom: 5px;
