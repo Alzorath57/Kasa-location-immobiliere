@@ -17,6 +17,7 @@ function Logement() {
   }
   const star = [1, 2, 3, 4, 5];
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
+  const hasMultiplePictures = logement.pictures.length > 1;
   return (
     <>
       <div className="carousel">
@@ -24,30 +25,34 @@ function Logement() {
           src={logement.pictures[currentPictureIndex]}
           alt={logement.title}
         />
-        <button
-          className="arrow-left"
-          onClick={() =>
-            setCurrentPictureIndex(
-              (currentPictureIndex - 1 + logement.pictures.length) %
-                logement.pictures.length,
-            )
-          }
-        >
-          <img src={arrowLeft} alt="Photo précédente" />
-        </button>
-        <button
-          className="arrow-right"
-          onClick={() =>
-            setCurrentPictureIndex(
-              (currentPictureIndex + 1) % logement.pictures.length,
-            )
-          }
-        >
-          <img src={arrowRight} alt="Photo suivante" />
-        </button>
-        <p className="compteur">
-          {currentPictureIndex + 1}/{logement.pictures.length}
-        </p>
+        {hasMultiplePictures && (
+          <>
+            <button
+              className="arrow-left"
+              onClick={() =>
+                setCurrentPictureIndex(
+                  (currentPictureIndex - 1 + logement.pictures.length) %
+                    logement.pictures.length,
+                )
+              }
+            >
+              <img src={arrowLeft} alt="Photo précédente" />
+            </button>
+            <button
+              className="arrow-right"
+              onClick={() =>
+                setCurrentPictureIndex(
+                  (currentPictureIndex + 1) % logement.pictures.length,
+                )
+              }
+            >
+              <img src={arrowRight} alt="Photo suivante" />
+            </button>
+            <p className="compteur">
+              {currentPictureIndex + 1}/{logement.pictures.length}
+            </p>
+          </>
+        )}
       </div>
       <div className="logement-info">
         <div className="logement-titre">
