@@ -28,11 +28,10 @@
   }
   p {
     position: absolute;
-    display: flex;
-    top: 290px;
-    left: 15px;
+    bottom: 20px;
+    left: 20px;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     z-index: 2;
   }
@@ -43,8 +42,6 @@
     height: 255px;
   }
   .card p {
-    top: auto;
     bottom: 15px;
-    font-size: 18px;
   }
 }
