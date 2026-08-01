@@ -65,12 +65,12 @@
     display: inline-block;
     background-color: #ff6060;
     color: #fff;
-    padding: 5px 10px;
     border-radius: 10px;
     margin-right: 10px;
     font-size: 14px;
     margin-bottom: 24px;
     padding: 5px 15px;
+    font-weight: 700;
   }
   .host {
     display: flex;
@@ -165,7 +165,6 @@
     }
     li {
       font-size: 10px;
-      font-weight: 700;
       margin-bottom: 0;
     }
     .star-active img,
