@@ -3,7 +3,7 @@
   grid-template-columns: 340px 340px 340px;
   gap: 60px;
   justify-content: center;
-  margin: 43px 100px 50px;
+  margin: 50px 100px 50px;
   background-color: #f6f6f6;
   padding: 56px 50px 43px;
   border-radius: 25px;
@@ -11,8 +11,8 @@
 @media (max-width: 480px) {
   .cards-grid {
     grid-template-columns: 1fr;
-    margin: 20px;
-    padding-top: 20px;
+    margin: 27px 20px 20px;
+    padding: 0;
     gap: 27px;
     background-color: transparent;
     border-radius: 0;
