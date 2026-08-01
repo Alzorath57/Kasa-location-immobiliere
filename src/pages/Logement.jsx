@@ -94,7 +94,7 @@ function Logement() {
           content={<p>{logement.description}</p>}
         ></Accordion>
         <Accordion
-          title="Equipements"
+          title="Équipements"
           content={
             <ul>
               {logement.equipments.map((equipement) => (
