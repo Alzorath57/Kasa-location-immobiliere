@@ -12,11 +12,11 @@ import starInactive from "../assets/star-inactive.svg";
 function Logement() {
   const { id } = useParams();
   const logement = logements.find((logement) => logement.id === id);
+  const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
+  const star = [1, 2, 3, 4, 5];
   if (!logement) {
     return <Error />;
   }
-  const star = [1, 2, 3, 4, 5];
-  const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   const hasMultiplePictures = logement.pictures.length > 1;
   return (
     <>
