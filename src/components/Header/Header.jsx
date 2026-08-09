@@ -1,11 +1,13 @@
-import { NavLink } from "react-router-dom";
 import "./Header.scss";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <h1>
-        <img src="/logo.svg" alt="Logo du site location immobiliere Kasa" />
+        <Link to="/">
+          <img src="/logo.svg" alt="Logo du site location immobiliere Kasa" />
+        </Link>
       </h1>
       <nav>
         <ul>
