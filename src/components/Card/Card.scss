@@ -1,11 +1,12 @@
 .card {
-  width: 340px;
-  height: 340px;
+  width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 10px;
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  min-width: 0;
   .overlay {
     position: absolute;
     top: 0;
@@ -41,8 +42,7 @@
 }
 @media (max-width: 480px) {
   .card {
-    width: 335px;
-    height: 255px;
+    aspect-ratio: 4/3;
   }
   .card p {
     bottom: 15px;
